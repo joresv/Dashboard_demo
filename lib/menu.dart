@@ -33,7 +33,7 @@ class _MenuState extends State<Menu> {
           : width < 400
               ? 0
               : 60,
-      duration: Duration(milliseconds: 700),
+      duration: Duration(milliseconds: 500),
       padding: EdgeInsets.symmetric(
         horizontal: !widget.isVisible ? 15 : 25,
       ).copyWith(top: 20),
@@ -50,11 +50,11 @@ class _MenuState extends State<Menu> {
       child: Column(
         children: [
           AnimatedOpacity(
-            duration: Duration(milliseconds: 700),
+            duration: Duration(milliseconds: 500),
             opacity: widget.isVisible ? 1 : 0,
             child: AnimatedContainer(
               width: widget.isVisible ? 300 : 1,
-              duration: Duration(milliseconds: 700),
+              duration: Duration(milliseconds: 500),
               child: Text(
                 'PersonalDS',
                 style: TextStyle(
@@ -81,7 +81,7 @@ class _MenuState extends State<Menu> {
                     physics: NeverScrollableScrollPhysics(),
                     child: AnimatedContainer(
                       width: widget.isVisible ? 300 : 70,
-                      duration: Duration(milliseconds: 700),
+                      duration: Duration(milliseconds: 500),
                       margin: EdgeInsets.only(bottom: 30),
                       child: InkWell(
                         highlightColor: Colors.transparent,
