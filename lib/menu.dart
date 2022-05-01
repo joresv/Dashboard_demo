@@ -15,7 +15,7 @@ class _MenuState extends State<Menu> {
   final List<String> menuItems = [
     'Dashboard',
     'Analystics',
-    'Peaple',
+    'People',
     'Company',
     'Documents',
     'Client chat',
