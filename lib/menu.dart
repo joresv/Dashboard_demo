@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class Menu extends StatefulWidget {
-  Menu({Key? key, this.isVisible = true}) : super(key: key);
+  Menu({Key? key, this.isVisible = true, this.onChanged}) : super(key: key);
   final bool isVisible;
+  final void Function(int value)? onChanged;
 
   @override
   State<Menu> createState() => _MenuState();
@@ -85,6 +86,9 @@ class _MenuState extends State<Menu> {
                       child: InkWell(
                         highlightColor: Colors.transparent,
                         onTap: () {
+                          if (widget.onChanged != null) {
+                            widget.onChanged!(index);
+                          }
                           select = e;
                           setState(() {});
                         },

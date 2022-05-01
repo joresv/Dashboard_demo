@@ -1,4 +1,3 @@
-import 'package:dashboard_dark/config.dart';
 import 'package:dashboard_dark/home.dart';
 import 'package:flutter/material.dart';
 
@@ -16,11 +15,19 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Dashboard',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-        primaryColor: Colors.white,
-        fontFamily: 'medium',
-        // textTheme: ThemeData()
-      ),
+          primarySwatch: Colors.blue,
+          primaryColor: Colors.white,
+          fontFamily: 'medium',
+          scrollbarTheme: ScrollbarThemeData(
+              isAlwaysShown: true,
+              thickness: MaterialStateProperty.all(7),
+              thumbColor: MaterialStateProperty.all(
+                Colors.white.withOpacity(.6),
+              ),
+              radius: const Radius.circular(10),
+              minThumbLength: 100)
+          // textTheme: ThemeData()
+          ),
       home: Home(),
     );
   }

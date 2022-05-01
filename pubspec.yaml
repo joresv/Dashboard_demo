@@ -20,6 +20,7 @@ dependencies:
   flutter_feather_icons: ^2.0.0+1
   flutter_svg: ^1.0.3
   syncfusion_flutter_charts: ^20.1.50
+  peanut: ^4.1.1
 
 dev_dependencies:
   flutter_test:
